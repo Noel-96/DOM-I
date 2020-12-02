@@ -40,3 +40,101 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+
+let headerNav = document.querySelectorAll('nav a');
+
+
+// for (var key in  siteContent['nav']) {
+//   if ( siteContent['nav'].hasOwnProperty(key)) {
+//     headerNav.forEach( link => link.textContent = siteContent['nav'][key].toString());
+//       console.log(key + " -> " + siteContent['nav'][key]);
+//   }
+// }
+
+let arrayNav = Array.from(headerNav);
+arrayNav[0].textContent = siteContent['nav']['nav-item-1'];
+arrayNav[1].textContent = siteContent['nav']['nav-item-2'];
+arrayNav[2].textContent = siteContent['nav']['nav-item-3'];
+arrayNav[3].textContent = siteContent['nav']['nav-item-4'];
+arrayNav[4].textContent = siteContent['nav']['nav-item-5'];
+arrayNav[5].textContent = siteContent['nav']['nav-item-6'];
+
+
+
+let h1 = document.querySelector('div.cta-text h1');
+h1.textContent = siteContent["cta"]["h1"];
+
+let button = document.querySelector('div.cta-text  button');
+button.textContent = siteContent["cta"]["button"];
+
+
+//let source = document.getElementById("cta-img");
+let source = document.querySelector("section.cta img");
+source.setAttribute('src', siteContent["cta"]["img-src"]);
+
+
+let textContent1 = document.querySelector('div.top-content .text-content:nth-of-type(1) h4');
+let firstH4 = textContent1.querySelector('h4');
+textContent1.textContent = siteContent["main-content"]["features-h4"];
+
+let textContent2 = document.querySelector('div.top-content .text-content:nth-of-type(1) p');
+let firstP = textContent2.querySelector('p');
+textContent2.textContent = siteContent["main-content"]["features-content"];
+
+
+let textContent3 = document.querySelector('div.top-content .text-content:nth-of-type(2) h4');
+let secondH4 = textContent3.querySelector('h4');
+textContent3.textContent = siteContent["main-content"]["about-h4"];
+
+let textContent4 = document.querySelector('div.top-content .text-content:nth-of-type(2) p');
+let secondP = textContent4.querySelector('p');
+textContent4.textContent = siteContent["main-content"]["about-content"];
+
+
+
+let middileImg = document.getElementById("middle-img");
+middileImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
+
+
+let bottomContentFirstH4 = document.querySelector('div.bottom-content .text-content:nth-of-type(1) h4');
+bottomContentFirstH4.textContent = siteContent["main-content"]["services-h4"];
+
+let bottomContentFirstp = document.querySelector('div.bottom-content .text-content:nth-of-type(1) p');
+bottomContentFirstp.textContent = siteContent["main-content"]["services-content"];
+
+
+let bottomContentSecondH4 = document.querySelector('div.bottom-content .text-content:nth-of-type(2) h4');
+bottomContentSecondH4.textContent = siteContent["main-content"]["product-h4"];
+
+let bottomContentSecondp = document.querySelector('div.bottom-content .text-content:nth-of-type(2) p');
+bottomContentSecondp.textContent = siteContent["main-content"]["product-content"];
+
+
+let bottomContentThirdH4 = document.querySelector('div.bottom-content .text-content:nth-of-type(3) h4');
+bottomContentThirdH4.textContent = siteContent["main-content"]["vision-h4"];
+
+let bottomContentThirdp = document.querySelector('div.bottom-content .text-content:nth-of-type(3) p');
+bottomContentThirdp.textContent = siteContent["main-content"]["vision-content"];
+
+
+//update the contact
+let contacth4 = document.querySelector("section.contact h4");
+contacth4.textContent = siteContent["contact"]["contact-h4"];
+
+let contactP = document.querySelector('section.contact p:nth-of-type(1)')
+contactP.textContent = siteContent["contact"]["address"];
+
+let contactSecondP = document.querySelector('section.contact p:nth-of-type(2)')
+contactSecondP.textContent = siteContent["contact"]["phone"];
+
+let contactThirdP = document.querySelector('section.contact p:nth-of-type(3)')
+contactThirdP.textContent = siteContent["contact"]["email"];
+
+
+//updating footer
+let footerp = document.querySelector('footer p');
+footerp.textContent = siteContent["footer"]["copyright"];
